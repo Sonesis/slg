@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <!--The head of the page-->
+    <head>
+        <!--Import bootstrap through bootstrap CDN-->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+        <!-- Import Control.js to do the links generating-->
+        <script src="./control.js"></script>
+    </head>
+
+    <!--The page body-->
+    <body>
+        <div class="p-5 bg-dark shadow">
+            <center>
+                <h1 class="text-white" style="font-size: 5em;">Lets Generate</h1>
+                <p class="text-white">Generate multiple links of a particular series in one click</p>
+            <div class="input-group m-3" style="width: 50%; height: 50px;">
+                <input id="link" type="text" class="form-control" style="height: 50px;" placeholder="Paste link here" aria-label="Paste link here" aria-describedby="basic-addon1">
+                <input id="amount" type="number" class="form-control" style="height: 50px; width:10px;" value="1" aria-describedby="basic-addon1">
+                <div class="input-group-append">
+                    <button class="btn btn-primary" type="button" onclick="generateLinks();">Generate</button>
+                </div>
+            </div>   
+            </center>              
+        </div>
+        <div class="container-fluid p-5">
+            <div class="row">
+                <div class="col-md-6">
+                    <ul class="list-group">
+                        <li class="list-group-item"><h2>Procedure:</h2></li>
+                        <li class="list-group-item">
+                            <span class="badge badge-primary badge-pill mr-2" style="font-size: 1.2em;">1</span>
+                            Get the download link of an episode of your series (it ends with .mp4 or .3gp)</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-primary badge-pill mr-2" style="font-size: 1.2em;">2</span>
+                            Copy and Paste it above then set the max depisodes</li>
+                        <li class="list-group-item">
+                            <span class="badge badge-primary badge-pill mr-2" style="font-size: 1.2em;">3</span>
+                            Hit the 'Generate' button to generate more episodes download links</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-6" id="results">
+
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

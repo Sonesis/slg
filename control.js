@@ -1,23 +1,31 @@
 function generateLinks(){
+    //get the id of the result section
     var result = document.getElementById("results");
+    //get the link the user has pasted
     var link = document.getElementById("link").value;
-    var episodes = document.getElementById("amount").value;
+    //get the max amount of episodes he/she wants
+    var howmanyepisodes = document.getElementById("amount").value;
 
     var endHTML = "<h1>Episodes Link</h1>"
 
     if(link != ""){
+        //get current season
         var match = /S\d+/.exec(link);
+        //get current episode
         var episodesMatch = /E\d+/.exec(link);
 
         if(match != null && match.length != 0 
-            && episodesMatch != null && episodesMatch.length != 0){
+           && episodesMatch != null && episodesMatch.length != 0 
+           && parseInt(howmanyepisodes) > 0){
+            
             var season = parseInt(match[0].replace("S", ""));
-            var count = parseInt(episodesMatch[0].replace("E", ""));
+            var currentEpisode = parseInt(episodesMatch[0].replace("E", ""));
 
             endHTML = "<ul class=\"list-group\">";
 
-            for(var i = count; i <= parseInt(episodes); i++){
+            for(var i = currentEpisode; i <= parseInt(howmanyepisodes); i++){
                 if(i < 10){
+                    //add the result
                     endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
                     endHTML += "<a class=\"ml-5 btn btn-primary\" target=\"_blank\" href=\"";
                     endHTML += link.replace(/E\d+/, "E0"+i);

@@ -31,7 +31,10 @@ function generateLinks(){
                     endHTML += link.replace(/E\d+/, "E0"+i);
                     endHTML += "\" type=\"application/octet-stream\" download>Download</a></li>";
                 } else {
+                    endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
+                    endHTML += "<a class=\"ml-5 btn btn-primary\" target=\"_blank\" href=\"";
                     endHTML += link.replace(/E\d+/, "E"+i);
+                    endHTML += "\" type=\"application/octet-stream\" download>Download</a></li>";
                 }
             }
             endHTML += "</ul>";

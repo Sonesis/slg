@@ -27,14 +27,14 @@ function generateLinks(){
                 if(i < 10){
                     //add the result
                     endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
-                    endHTML += "<a class=\"ml-5 btn btn-primary\" target=\"_blank\" href=\"";
+                    endHTML += "<a class=\"ml-5 btn btn-primary\" href=\"";
                     endHTML += link.replace(/E\d+/, "E0"+i);
-                    endHTML += "\" type=\"application/octet-stream\" download>Download</a></li>";
+                    endHTML += "\" download=\""+"Episode "+ i+">Download</a></li>";
                 } else {
                     endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
-                    endHTML += "<a class=\"ml-5 btn btn-primary\" target=\"_blank\" href=\"";
+                    endHTML += "<a class=\"ml-5 btn btn-primary\" href=\"";
                     endHTML += link.replace(/E\d+/, "E"+i);
-                    endHTML += "\" type=\"application/octet-stream\" download>Download</a></li>";
+                    endHTML += "\" download=\""+"Episode "+ i+">Download</a></li>";
                 }
             }
             endHTML += "</ul>";

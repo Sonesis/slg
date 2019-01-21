@@ -29,12 +29,12 @@ function generateLinks(){
                     endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
                     endHTML += "<a class=\"ml-5 btn btn-primary\" href=\"";
                     endHTML += link.replace(/E\d+/, "E0"+i);
-                    endHTML += "\" download=\""+"Episode "+ i+">Download</a></li>";
+                    endHTML += "\" download=\""+"Episode "+ i+"\">Download</a></li>";
                 } else {
                     endHTML += "<li class=\"list-group-item\">"+"Episode "+ i;
                     endHTML += "<a class=\"ml-5 btn btn-primary\" href=\"";
                     endHTML += link.replace(/E\d+/, "E"+i);
-                    endHTML += "\" download=\""+"Episode "+ i+">Download</a></li>";
+                    endHTML += "\" download=\""+"Episode "+ i+"\">Download</a></li>";
                 }
             }
             endHTML += "</ul>";
